@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "stage": "2b_reference_soc",
+  "status": "canonical",
+  "producer": "scripts/build_reference.py",
+  "producer_sha256": "5ea6d50d9b8c3f9d6f38b23c7d6cd95d9284f4761b94506049644522fc2b719a",
+  "created_at": "2026-10-29T00:42:52.614286+00:00",
+  "parent_manifest": "data/processed/manifest.json",
+  "parent_manifest_sha256": "41edb46734bef2d995e867e5ee3bf009508437a9efd4d4e017fe4eced48abb7f",
+  "protocol_readme_sha256": "809c0045eabcf4913a380ad520e4016f52a9c4186e6d15958992df3baf0e1427",
+  "reference_policy": "data/reference/reference_policy.json",
+  "reference_policy_sha256": "3d6c5ce36fdb124fa42621ed3501e9afa8f1fdc844b4088791e391f6f1edf2b7",
+  "splits": {
+    "train": [
+      "551_Mixed1.csv",
+      "551_Mixed2.csv",
+      "552_Mixed3.csv",
+      "552_Mixed4.csv"
+    ],
+    "validation": [
+      "552_Mixed5.csv",
+      "552_Mixed6.csv"
+    ],
+    "test": [
+      "552_Mixed7.csv",
+      "552_Mixed8.csv"
+    ]
+  },
+  "modeling_data_manifest": "data/processed/manifest.json",
+  "scope": "八条动态记录的输入和计算参考SOC；模型参数尚未辨识",
+  "acceptance": "上游哈希匹配；充电对应关系及截止条件通过；连续时间/无容量归零；参考SOC复读公式通过；积分交叉差小于1个百分点",
+  "files": [
+    {
+      "path": "data/reference/551_Mixed1.csv",
+      "sha256": "71a07948d93ec08b91d857d18fa8272af6c715bcb58009026b3c0c945263d24b",
+      "role": "train",
+      "rows": 77226,
+      "parent_path": "data/processed/LG_HG2_25degC/551_Mixed1.csv",
+      "parent_sha256": "a731978a00e71d2d9d8c362de1e0603ce58118fea6df8c00f725ddd65bd21c18",
+      "charge_context_file": "551_Charge6.csv"
+    },
+    {
+      "path": "data/reference/551_Mixed2.csv",
+      "sha256": "8cb09d32f4ab9a32ab5d2eca1ba454bd403776d597bd65e7dd86c6541681d447",
+      "role": "train",
+      "rows": 79171,
+      "parent_path": "data/processed/LG_HG2_25degC/551_Mixed2.csv",
+      "parent_sha256": "789823e9692773b1a76978798cb6ccfb180e0a7677d0f098096717a67a1450b9",
+      "charge_context_file": "551_Charge7.csv"
+    },
+    {
+      "path": "data/reference/552_Mixed3.csv",
+      "sha256": "964b700c73336901bf6b2922749e5954a5f21228f6867d948406c49b1d466b12",
+      "role": "train",
+      "rows": 73826,
+      "parent_path": "data/processed/LG_HG2_25degC/552_Mixed3.csv",
+      "parent_sha256": "87fc73053484d3d74fe3f0aa513cfaa064b114f6bb68a14a62bd3ec31f5e5b21",
+      "charge_context_file": "552_Charge9.csv"
+    },
+    {
+      "path": "data/reference/552_Mixed4.csv",
+      "sha256": "05b5707bdd704fbbe9380a73722bcc1d7fdb08547fac3a072709863496727155",
+      "role": "train",
+      "rows": 80850,
+      "parent_path": "data/processed/LG_HG2_25degC/552_Mixed4.csv",
+      "parent_sha256": "54ff677a795040e7ea619854364bf6614856ab225fc0d527651dc894006f3864",
+      "charge_context_file": "552_Charge10.csv"
+    },
+    {
+      "path": "data/reference/552_Mixed5.csv",
+      "sha256": "a25966c4e53cfeaac40be3473efed5d65bc740609edae91dc0322f09cf70b88b",
+      "role": "validation",
+      "rows": 72184,
+      "parent_path": "data/processed/LG_HG2_25degC/552_Mixed5.csv",
+      "parent_sha256": "08f11d51082d5f55967f6b00109b3421b0d1669f359c862e0b1a4452e437dd6f",
+      "charge_context_file": "552_Charge11.csv"
+    },
+    {
+      "path": "data/reference/552_Mixed6.csv",
+      "sha256": "09cf6e1da0c70c373ee584e1d514ab5e24cb09d999caf55d86c0d290e0e24358",
+      "role": "validation",
+      "rows": 78105,
+      "parent_path": "data/processed/LG_HG2_25degC/552_Mixed6.csv",
+      "parent_sha256": "1f77703fad9ad3bbb1785fb202a11486f2e3d470a72d726548ef9db22c9b67c5",
+      "charge_context_file": "552_Charge12.csv"
+    },
+    {
+      "path": "data/reference/552_Mixed7.csv",
+      "sha256": "0351be8be78e2f4343b21375e864764ee9063d8ecdf09bea2760811254eb5cfb",
+      "role": "test",
+      "rows": 73234,
+      "parent_path": "data/processed/LG_HG2_25degC/552_Mixed7.csv",
+      "parent_sha256": "b32bdfa5b879fb811dfdaa26dcb52a26ecec383455bd4226c33c357c42b94874",
+      "charge_context_file": "552_Charge13.csv"
+    },
+    {
+      "path": "data/reference/552_Mixed8.csv",
+      "sha256": "0918f4af930eafc8567190a2131c65dd2dbd4da8807bc27becdc23dd0d5ee219",
+      "role": "test",
+      "rows": 85915,
+      "parent_path": "data/processed/LG_HG2_25degC/552_Mixed8.csv",
+      "parent_sha256": "6c6db3f0ac02a0e0c1b432c817e78ff1daa8f8d819dd8c5b278798565810b58b",
+      "charge_context_file": "552_Charge14.csv"
+    }
+  ],
+  "supporting_files": [
+    {
+      "path": "data/reference/charge_matches.csv",
+      "sha256": "e6de94797b0096984c8cbaa316a4459f2941d5e02fcc6a94475200dd8cda6ad5"
+    },
+    {
+      "path": "data/reference/capacity_check.csv",
+      "sha256": "6959e7d63569f5dae065b0b7d4e145216c223aa755b4793d04dc87ed9f8898ab"
+    },
+    {
+      "path": "data/reference/reference_summary.csv",
+      "sha256": "ef4c1a417c7cd1de889961e7a5c48968875975cd0a383c3a2c4320a42a347cd2"
+    },
+    {
+      "path": "data/reference/reference_policy.json",
+      "sha256": "3d6c5ce36fdb124fa42621ed3501e9afa8f1fdc844b4088791e391f6f1edf2b7"
+    }
+  ]
+}

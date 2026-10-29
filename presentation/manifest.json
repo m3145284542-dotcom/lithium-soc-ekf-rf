@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "stage": "6_delivery",
+  "status": "canonical",
+  "created_at": "2026-10-29T01:15:11.369369+00:00",
+  "producer": "scripts/package_delivery.py",
+  "role": "课程技术成果与展示材料；个人贡献记录为成员待填写模板",
+  "acceptance": "7页PPT已渲染检查；指标引用既有正式实验；上游哈希匹配；仅作交付基本检查",
+  "parents": [
+    {
+      "path": "outputs/model/manifest.json",
+      "bytes": 4919,
+      "sha256": "657c76b7c249caa9d2ab1170cf8407b5b0cc1ec08cf3ec0f77b708ba8291ec52"
+    },
+    {
+      "path": "outputs/correction/manifest.json",
+      "bytes": 5555,
+      "sha256": "53c32cb7f5cc2bc767ec8618a31269e25adc7db1ee079d161ced1343a50b624c"
+    },
+    {
+      "path": "outputs/experiments/manifest.json",
+      "bytes": 4310,
+      "sha256": "d68ef1391923542ccd2f4b95026c409e87844d4d47b9af2fd4af262401b83e21"
+    },
+    {
+      "path": "outputs/figures/experiments/manifest.json",
+      "bytes": 8613,
+      "sha256": "d64435cda58cb40160adcaa0ad72cc4bb33aa1847f3713b5a9576a2e1866c52b"
+    }
+  ],
+  "files": [
+    {
+      "path": "presentation/SOC融合估计_6分钟汇报.pptx",
+      "bytes": 323991,
+      "sha256": "5a8c78ac2fe2c86e4246d7b71c5ccbef93de0652bc7587a5a959447c4d79c170"
+    },
+    {
+      "path": "presentation/6分钟讲稿与答辩.md",
+      "bytes": 7512,
+      "sha256": "5f0de85ee163564aa27dc4600fa4fa9424c45c1a1838ee9ca5bb4f9558b3b39e"
+    },
+    {
+      "path": "presentation/贡献记录与个人反思.md",
+      "bytes": 3854,
+      "sha256": "03ddc878eeaf8e562b7aad40f164b526c45da0dc9543ce763507e406f6de37c9"
+    },
+    {
+      "path": "交付说明.md",
+      "bytes": 3555,
+      "sha256": "0aefaa71b579951f775e1c75bd983832a97e78940accc4b5d67753fee2f5d2c2"
+    }
+  ],
+  "supporting_sources": [
+    {
+      "path": "main.py",
+      "bytes": 1377,
+      "sha256": "ec14266ed7acc971c4a40303c02d2bba302b3b2a57b6829d98214b6001beb13c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 13479,
+      "sha256": "127e9c8a13ca11dc1297efc891e6b7532619528097d2f4468381aa268fd8e6fe"
+    },
+    {
+      "path": "项目大纲与执行计划.md",
+      "bytes": 14866,
+      "sha256": "2a716a70475b2563aa03664857f298ffe60bccd3a7880740ec48aa6413535d91"
+    },
+    {
+      "path": "work/presentation-build/build.mjs",
+      "bytes": 15606,
+      "sha256": "7de573abddfb87ba3497ad996d5696048dc2fd0bbe3b12802cfbff62637278d3"
+    }
+  ],
+  "pending_human_items": [
+    "实际组员身份",
+    "真实贡献及比例",
+    "个人反思",
+    "真人计时演练"
+  ]
+}

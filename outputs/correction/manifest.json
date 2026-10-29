@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "stage": "4_random_forest_correction",
+  "status": "canonical",
+  "created_at": "2026-10-29T01:02:56.295015+00:00",
+  "producer": "scripts/train_correction.py",
+  "role": "第五阶段固定融合模型；训练/验证对照预测与指标",
+  "acceptance": "上游正式状态与哈希一致；因果窗口/标签排除检查；保存复读预测一致；全量六条有限值及SOC边界通过",
+  "parents": [
+    {
+      "path": "outputs/model/manifest.json",
+      "sha256": "657c76b7c249caa9d2ab1170cf8407b5b0cc1ec08cf3ec0f77b708ba8291ec52"
+    },
+    {
+      "path": "data/reference/manifest.json",
+      "sha256": "0ce9c3e6139ce0eaff9a19bf5b9e9ce01ed2b4ff42e6b3754b56d466089454a8"
+    }
+  ],
+  "input_files": [
+    {
+      "path": "data/reference/551_Mixed1.csv",
+      "sha256": "71a07948d93ec08b91d857d18fa8272af6c715bcb58009026b3c0c945263d24b"
+    },
+    {
+      "path": "outputs/predictions/ekf/551_Mixed1.csv",
+      "sha256": "fa19a4a0aec1136c32d7351295de5be6c79fc41274801bfd2fcabfd35cc3990e"
+    },
+    {
+      "path": "data/reference/551_Mixed2.csv",
+      "sha256": "8cb09d32f4ab9a32ab5d2eca1ba454bd403776d597bd65e7dd86c6541681d447"
+    },
+    {
+      "path": "outputs/predictions/ekf/551_Mixed2.csv",
+      "sha256": "7c8b10c6f99d72ed0ba8ef402f69640549daf17efae9902dd075f3433178eb63"
+    },
+    {
+      "path": "data/reference/552_Mixed3.csv",
+      "sha256": "964b700c73336901bf6b2922749e5954a5f21228f6867d948406c49b1d466b12"
+    },
+    {
+      "path": "outputs/predictions/ekf/552_Mixed3.csv",
+      "sha256": "868338039b9844777b735f0ade4ecb0ee5add4d86ebd1dfbf75d0ba43eb43f2c"
+    },
+    {
+      "path": "data/reference/552_Mixed4.csv",
+      "sha256": "05b5707bdd704fbbe9380a73722bcc1d7fdb08547fac3a072709863496727155"
+    },
+    {
+      "path": "outputs/predictions/ekf/552_Mixed4.csv",
+      "sha256": "ad374c1b5bcde01d46ee50cc60f610ada1c027d29b9bea93ce6fd0adb5ce017f"
+    },
+    {
+      "path": "data/reference/552_Mixed5.csv",
+      "sha256": "a25966c4e53cfeaac40be3473efed5d65bc740609edae91dc0322f09cf70b88b"
+    },
+    {
+      "path": "outputs/predictions/ekf/552_Mixed5.csv",
+      "sha256": "14d95f62b4fbbb3caa94a5596bbbe1cfe471e50ca8176632b98215de8ef01430"
+    },
+    {
+      "path": "data/reference/552_Mixed6.csv",
+      "sha256": "09cf6e1da0c70c373ee584e1d514ab5e24cb09d999caf55d86c0d290e0e24358"
+    },
+    {
+      "path": "outputs/predictions/ekf/552_Mixed6.csv",
+      "sha256": "4447539ffea911a1c697712420f984606f67db6b1cae1696158d74e173ffcfbd"
+    }
+  ],
+  "producer_sources": [
+    {
+      "path": "scripts/train_correction.py",
+      "sha256": "eac2ba1e63a654b0faa29691e0cce610ec93a4c8ffbe81946ed7b3ce96795e0a"
+    },
+    {
+      "path": "scripts/build_model.py",
+      "sha256": "16681d35e3143d8c6b9317fe0032b8d05d0be838a7476e3f85d25254d0e2af8a"
+    },
+    {
+      "path": "src/correction.py",
+      "sha256": "805c7d961cc332ee8008d839f4882d7942ab9407ed9207704cd9bc87d7c52d71"
+    }
+  ],
+  "selected_candidate": "depth12_leaf50",
+  "executed_splits": [
+    "train",
+    "validation"
+  ],
+  "held_out_test": [
+    "552_Mixed7.csv",
+    "552_Mixed8.csv"
+  ],
+  "files": [
+    {
+      "path": "outputs/predictions/fusion/551_Mixed1.csv",
+      "role": "fusion_prediction",
+      "sha256": "8146cab6d83211a3771dd41c6903c378e106917f62b2b0d5c5ac4646edc57348"
+    },
+    {
+      "path": "outputs/predictions/fusion/551_Mixed2.csv",
+      "role": "fusion_prediction",
+      "sha256": "d703df733cf922ad207416e3aa0d357404d7105b64e380994ecdc78f86bb74ab"
+    },
+    {
+      "path": "outputs/predictions/fusion/552_Mixed3.csv",
+      "role": "fusion_prediction",
+      "sha256": "68d00363c99f1b3a03b6ea6de29de0fd0bf2e0b8e38b3147ca0433e3a8569be6"
+    },
+    {
+      "path": "outputs/predictions/fusion/552_Mixed4.csv",
+      "role": "fusion_prediction",
+      "sha256": "714c55ed7daaa4738403b6f0e5b1264434b093c7b9001b1b484ce674d4569240"
+    },
+    {
+      "path": "outputs/predictions/fusion/552_Mixed5.csv",
+      "role": "fusion_prediction",
+      "sha256": "b4427d2bd5c6c4ed6486a64387d26e50595a3d133c297e71bde7bda8e5de03e2"
+    },
+    {
+      "path": "outputs/predictions/fusion/552_Mixed6.csv",
+      "role": "fusion_prediction",
+      "sha256": "a3f77b1c69a75aec235814babbe91d7c29c926033de60beecbf50e2d01085af2"
+    },
+    {
+      "path": "outputs/correction/random_forest.joblib",
+      "role": "random_forest",
+      "sha256": "7ffed5097a4c0c67c325eed6fcc7dc98ae258a8d3c0ab731c9136360c999235f"
+    },
+    {
+      "path": "outputs/correction/training_config.json",
+      "role": "training_config",
+      "sha256": "e3a49cccf0e352a534c593dfab461cf5386e7ea3bf90f9e265242faccdcae7ab"
+    },
+    {
+      "path": "outputs/correction/validation_candidates.csv",
+      "role": "selection_metrics",
+      "sha256": "f5e89e3967f549c42dfdb3e082ee2b651aa87263f0187b7f589fe00f7075b4f6"
+    },
+    {
+      "path": "outputs/correction/metrics.csv",
+      "role": "comparison_metrics",
+      "sha256": "235322afa71c37ef695f59a91c8b976d2eedec217e011da154c1aee96471f00d"
+    },
+    {
+      "path": "outputs/correction/feature_importance.csv",
+      "role": "feature_importance",
+      "sha256": "5718bc1141d8ac0e2784b0e5016ed5b2d5a9946581dca87932af59e9a07b7b7a"
+    },
+    {
+      "path": "outputs/correction/补偿建模报告.md",
+      "role": "stage_report",
+      "sha256": "efaa045da44f81555d7e39153ec76d15778b70a34b42a36495fff192f33debd9"
+    }
+  ]
+}

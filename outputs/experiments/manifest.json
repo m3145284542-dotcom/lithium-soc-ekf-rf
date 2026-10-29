@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "stage": "5_final_experiments",
+  "status": "canonical",
+  "created_at": "2026-10-29T01:06:46.886530+00:00",
+  "producer": "scripts/run_experiments.py",
+  "role": "固定模型的最终测试评价；报告与图表正式输入",
+  "acceptance": "三工况两记录完整运行；有限值/SOC边界/划分通过；上游模型和输入哈希不变",
+  "parents": [
+    {
+      "path": "outputs/model/manifest.json",
+      "sha256": "657c76b7c249caa9d2ab1170cf8407b5b0cc1ec08cf3ec0f77b708ba8291ec52"
+    },
+    {
+      "path": "outputs/correction/manifest.json",
+      "sha256": "53c32cb7f5cc2bc767ec8618a31269e25adc7db1ee079d161ced1343a50b624c"
+    },
+    {
+      "path": "data/reference/manifest.json",
+      "sha256": "0ce9c3e6139ce0eaff9a19bf5b9e9ce01ed2b4ff42e6b3754b56d466089454a8"
+    }
+  ],
+  "input_files": [
+    {
+      "path": "data/reference/552_Mixed7.csv",
+      "sha256": "0351be8be78e2f4343b21375e864764ee9063d8ecdf09bea2760811254eb5cfb"
+    },
+    {
+      "path": "data/reference/552_Mixed8.csv",
+      "sha256": "0918f4af930eafc8567190a2131c65dd2dbd4da8807bc27becdc23dd0d5ee219"
+    },
+    {
+      "path": "outputs/model/ekf_config.json",
+      "role": "ekf_config",
+      "sha256": "8099464c6675ac4921084e02badff198c5231a59897b316ffbffa39cc4dd7abc"
+    }
+  ],
+  "producer_sources": [
+    {
+      "path": "scripts/run_experiments.py",
+      "sha256": "b549f2ecede677cf57fdda04b1a37ebf95ef08158e9b6a56161482a9b9b94908"
+    },
+    {
+      "path": "scripts/train_correction.py",
+      "sha256": "eac2ba1e63a654b0faa29691e0cce610ec93a4c8ffbe81946ed7b3ce96795e0a"
+    },
+    {
+      "path": "src/battery.py",
+      "sha256": "f80965548e36dee414bd27f1e4f0da82509c55777d2b6c8b1057b035072a7274"
+    },
+    {
+      "path": "src/ekf.py",
+      "sha256": "c208cf09aac5d787a197e6b6ca28c73037bfc7b1f3ab57592a1940a6b80490f5"
+    },
+    {
+      "path": "src/correction.py",
+      "sha256": "805c7d961cc332ee8008d839f4882d7942ab9407ed9207704cd9bc87d7c52d71"
+    }
+  ],
+  "executed_split": "test",
+  "files": [
+    {
+      "path": "outputs/experiments/predictions/normal/552_Mixed7.csv",
+      "role": "test_prediction",
+      "sha256": "da146853e9bae8dcba11cc3d39ec7d1b947f81b9296e6798dcad4ea2e3ecf97c"
+    },
+    {
+      "path": "outputs/experiments/predictions/initial_bias/552_Mixed7.csv",
+      "role": "test_prediction",
+      "sha256": "1620380114cce646192a1d42a5483c3807598bbada3c092ef55961476ce68407"
+    },
+    {
+      "path": "outputs/experiments/predictions/measurement_noise/552_Mixed7.csv",
+      "role": "test_prediction",
+      "sha256": "cacf6f6a3db1988cf83e73153aac8adb1d447ff47914df3c550ed2c1be72fe19"
+    },
+    {
+      "path": "outputs/experiments/predictions/normal/552_Mixed8.csv",
+      "role": "test_prediction",
+      "sha256": "691d40196ceefad3aab04cfa4291395896c7317f3f7eda2af7da0fcf5d0b60f3"
+    },
+    {
+      "path": "outputs/experiments/predictions/initial_bias/552_Mixed8.csv",
+      "role": "test_prediction",
+      "sha256": "835630e356b05dc35cac070030ae50caffba55d4aca44100258e58278ea99e35"
+    },
+    {
+      "path": "outputs/experiments/predictions/measurement_noise/552_Mixed8.csv",
+      "role": "test_prediction",
+      "sha256": "80c54dcc9ee28e4c6e9f7d0fb513064ca9e494614c90b0551fe7adcac912268d"
+    },
+    {
+      "path": "outputs/experiments/experiment_config.json",
+      "role": "fixed_protocol",
+      "sha256": "ac7ae57f24063fbfa7479b1bc7138f9e9a3e0fd375eccb983112c37a96301e63"
+    },
+    {
+      "path": "outputs/experiments/metrics.csv",
+      "role": "test_metrics",
+      "sha256": "16f7c945983f9ef2e6d62854394461ff4fd91344f7800f30ef6ae74cbfb92a5e"
+    },
+    {
+      "path": "outputs/experiments/summary.csv",
+      "role": "equal_record_summary",
+      "sha256": "60b3ccfa38e59763e415218d670e2635d1cb4182cbbd65d1c91891695fce7df2"
+    },
+    {
+      "path": "outputs/experiments/time_region_metrics.csv",
+      "role": "error_location",
+      "sha256": "b153f629b53859c9d6a23b74418f7e784459752ad9bba9490ff65f8c0efc3c1c"
+    },
+    {
+      "path": "outputs/experiments/实验报告.md",
+      "role": "stage_report",
+      "sha256": "8b30724135bcb075836f9c65670addf573de4230a75fc80259b4e8b3ed6bcd4d"
+    }
+  ]
+}

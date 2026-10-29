@@ -1,0 +1,24 @@
+# 大体积数据：可用 scripts/prepare_data.py 重新下载，再按 README 顺序重建
+data/raw/
+data/processed/LG_HG2_25degC/
+data/processed/audit/
+data/reference/*Mixed*.csv
+outputs/predictions/
+outputs/experiments/predictions/
+
+# 交付压缩包超过 GitHub 单文件 100MB 上限
+delivery/*.zip
+
+# 内部过程文件
+work/*.collision.json
+work/experiment_figures_preview.png
+work/deepseek-handoffs.md
+work/presentation-build/node_modules/
+work/presentation-build/candidate.pptx
+work/presentation-build/candidate.pptx.inspect.ndjson
+work/presentation-build/slide-*.png
+
+__pycache__/
+*.pyc
+.claude/
+~$*

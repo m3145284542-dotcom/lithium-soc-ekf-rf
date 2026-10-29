@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "status": "canonical",
+  "stage": "3_model_figures",
+  "producer": "scripts/plot_model.py",
+  "producer_sha256": "8181e4aeba067faba7ca4fbec761b01068df077d6e2250b8f5bb52ab44eb1d47",
+  "created_at": "2026-10-29T00:57:22.281627+00:00",
+  "parent_manifest": "outputs/model/manifest.json",
+  "parent_manifest_sha256": "657c76b7c249caa9d2ab1170cf8407b5b0cc1ec08cf3ec0f77b708ba8291ec52",
+  "inputs": [
+    {
+      "path": "data/processed/LG_HG2_25degC/549_C20DisCh.csv",
+      "sha256": "7e9949f87aa1534ce74c9199ab1873626aac878706099d1a9ce221c9e2f73f2e"
+    },
+    {
+      "path": "outputs/predictions/ekf/552_Mixed5.csv",
+      "role": "ekf_prediction",
+      "sha256": "14d95f62b4fbbb3caa94a5596bbbe1cfe471e50ca8176632b98215de8ef01430"
+    },
+    {
+      "path": "outputs/predictions/ekf/552_Mixed6.csv",
+      "role": "ekf_prediction",
+      "sha256": "4447539ffea911a1c697712420f984606f67db6b1cae1696158d74e173ffcfbd"
+    }
+  ],
+  "files": [
+    {
+      "path": "outputs/figures/model/ocv_curve.png",
+      "sha256": "861dd656b731b0ab897d9d51fe1624b02efeee625558e16487034a606c0e34c6"
+    },
+    {
+      "path": "outputs/figures/model/ocv_curve.pdf",
+      "sha256": "a98cf8462936bfa1f9e77a1a3c55699950da874ab8d504f8af7a6b9fe3bccf24"
+    },
+    {
+      "path": "outputs/figures/model/ocv_curve.svg",
+      "sha256": "181ca4787904db9121b2d4fb031773dca94fceb1aebb46e32fd5f273f00cc502"
+    },
+    {
+      "path": "outputs/figures/model/552_Mixed5_soc.png",
+      "sha256": "034466d6a89c455e1796c35cc75246bbdcdd4824ccd809a70334753517aa74ec"
+    },
+    {
+      "path": "outputs/figures/model/552_Mixed5_soc.pdf",
+      "sha256": "98afa27c4f30fb1f9e0322269a78775c8bdb4d7a66bec63e0242fe02f6da3321"
+    },
+    {
+      "path": "outputs/figures/model/552_Mixed5_soc.svg",
+      "sha256": "004de96e81f836f155499de16d64a10c7e7c2ae468673a85a71f9429cccbcfe9"
+    },
+    {
+      "path": "outputs/figures/model/552_Mixed5_error.png",
+      "sha256": "10f969f3dfd41494f7c38d749b126f579d7122b1ceeb7f16c9308f7fdf7761aa"
+    },
+    {
+      "path": "outputs/figures/model/552_Mixed5_error.pdf",
+      "sha256": "3e9db1e5957dfc77fbb9a0b1d185e7478e6bbc9a1e2bdf89ddda6e6d3c538d1e"
+    },
+    {
+      "path": "outputs/figures/model/552_Mixed5_error.svg",
+      "sha256": "6425350d06eb9aa19484969b9b1c57faad327abffe20ff648c4d6476469f82eb"
+    },
+    {
+      "path": "outputs/figures/model/552_Mixed6_soc.png",
+      "sha256": "c72f94c19780f7798cf75ba9c7098c3ab2aa4ed5980c31adb2c6bac704c6dcd8"
+    },
+    {
+      "path": "outputs/figures/model/552_Mixed6_soc.pdf",
+      "sha256": "98395b8877cb259d90216247aa284dc694092a11acdedda5519b8cad772d2d69"
+    },
+    {
+      "path": "outputs/figures/model/552_Mixed6_soc.svg",
+      "sha256": "244f739de601f15da3b24a1561c0a19a5b41bfdea5dc07a76a488f15b4c4c3da"
+    },
+    {
+      "path": "outputs/figures/model/552_Mixed6_error.png",
+      "sha256": "06012475c7e3ad1c3c9218aee37ebdb23350785e05f69edd92099d783784789f"
+    },
+    {
+      "path": "outputs/figures/model/552_Mixed6_error.pdf",
+      "sha256": "343804cf57eb836910cf1b970729f0c8785bd743542e37a55027a8809af8e897"
+    },
+    {
+      "path": "outputs/figures/model/552_Mixed6_error.svg",
+      "sha256": "1b23895912e62beefab6faca3acb3b4912a11d043969f4d817fe099807373b0c"
+    }
+  ],
+  "acceptance": "模型与数据哈希核对；两条验证记录全采样；单面板PNG/PDF/SVG导出",
+  "scope": "课程测试项目结果图；无最终测试或融合结果"
+}

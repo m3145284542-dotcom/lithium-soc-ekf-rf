@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "status": "canonical",
+  "producer": "scripts/plot_experiments.py",
+  "producer_sha256": "3d447792c58e5b0f180ad318e72dc82844f84af595985982d9c78c485ac65d9b",
+  "created_at": "2026-10-29T01:07:03.467260+00:00",
+  "parent_manifest": "outputs/experiments/manifest.json",
+  "parent_manifest_sha256": "d68ef1391923542ccd2f4b95026c409e87844d4d47b9af2fd4af262401b83e21",
+  "acceptance": "六条正式预测哈希一致；12张完整时序图导出PNG/PDF/SVG",
+  "inputs": [
+    {
+      "path": "outputs/experiments/predictions/normal/552_Mixed7.csv",
+      "role": "test_prediction",
+      "sha256": "da146853e9bae8dcba11cc3d39ec7d1b947f81b9296e6798dcad4ea2e3ecf97c"
+    },
+    {
+      "path": "outputs/experiments/predictions/initial_bias/552_Mixed7.csv",
+      "role": "test_prediction",
+      "sha256": "1620380114cce646192a1d42a5483c3807598bbada3c092ef55961476ce68407"
+    },
+    {
+      "path": "outputs/experiments/predictions/measurement_noise/552_Mixed7.csv",
+      "role": "test_prediction",
+      "sha256": "cacf6f6a3db1988cf83e73153aac8adb1d447ff47914df3c550ed2c1be72fe19"
+    },
+    {
+      "path": "outputs/experiments/predictions/normal/552_Mixed8.csv",
+      "role": "test_prediction",
+      "sha256": "691d40196ceefad3aab04cfa4291395896c7317f3f7eda2af7da0fcf5d0b60f3"
+    },
+    {
+      "path": "outputs/experiments/predictions/initial_bias/552_Mixed8.csv",
+      "role": "test_prediction",
+      "sha256": "835630e356b05dc35cac070030ae50caffba55d4aca44100258e58278ea99e35"
+    },
+    {
+      "path": "outputs/experiments/predictions/measurement_noise/552_Mixed8.csv",
+      "role": "test_prediction",
+      "sha256": "80c54dcc9ee28e4c6e9f7d0fb513064ca9e494614c90b0551fe7adcac912268d"
+    }
+  ],
+  "files": [
+    {
+      "path": "outputs/figures/experiments/normal_552_Mixed7_soc.png",
+      "sha256": "d5687594bce6a667d714094e61c46d57e49342cb0547d0eb01f0e27db6d67130"
+    },
+    {
+      "path": "outputs/figures/experiments/normal_552_Mixed7_soc.pdf",
+      "sha256": "1d4fcf4f2792b888221c1bc10d1703e1825b795a989d6db7cf1fe913b6378dea"
+    },
+    {
+      "path": "outputs/figures/experiments/normal_552_Mixed7_soc.svg",
+      "sha256": "fdeed3f10c28950262d253f47f098ce03a9d7e762b667340cb744af436f98f25"
+    },
+    {
+      "path": "outputs/figures/experiments/normal_552_Mixed7_error.png",
+      "sha256": "f3bc73c9b711580ae8385d2f3d2a8867c1432e846ef808389299f95cf7183f60"
+    },
+    {
+      "path": "outputs/figures/experiments/normal_552_Mixed7_error.pdf",
+      "sha256": "6e0aba848cdbcc2509bbcfaa380a6366371e3671f3d74c8b8c245c9b7ae0f499"
+    },
+    {
+      "path": "outputs/figures/experiments/normal_552_Mixed7_error.svg",
+      "sha256": "00e1338456a03649d7407cb308f85409da6e20e2d29288df0b0f21bd018fd1df"
+    },
+    {
+      "path": "outputs/figures/experiments/initial_bias_552_Mixed7_soc.png",
+      "sha256": "ec834b6c38ca204f35a00cb438875f0c3b973d1bfc7fd664b460502a13c9c5cd"
+    },
+    {
+      "path": "outputs/figures/experiments/initial_bias_552_Mixed7_soc.pdf",
+      "sha256": "67848f89be65bbefbde28c34d4f571a59351436d8a4bb4c33d67fd19fcedcc79"
+    },
+    {
+      "path": "outputs/figures/experiments/initial_bias_552_Mixed7_soc.svg",
+      "sha256": "170468f7ce23227b76b96b79bacaa9df7174178bf02ca8732b15a602de63663b"
+    },
+    {
+      "path": "outputs/figures/experiments/initial_bias_552_Mixed7_error.png",
+      "sha256": "d04c899d55be065de8893cf9822cfb51b106856d9679092a26d9fddb4fd6c8de"
+    },
+    {
+      "path": "outputs/figures/experiments/initial_bias_552_Mixed7_error.pdf",
+      "sha256": "748e4704f09910ae265d2a865751faff55a5a13d11580c50492713676ba2b437"
+    },
+    {
+      "path": "outputs/figures/experiments/initial_bias_552_Mixed7_error.svg",
+      "sha256": "a5a09cc0922bff9e6742870852619b1fde04a11c799dfcd63c91dca4e1bdb0f5"
+    },
+    {
+      "path": "outputs/figures/experiments/measurement_noise_552_Mixed7_soc.png",
+      "sha256": "22ff6ab90341338f04222c36a7f926e4ec03f80460c58ceb1922b2a4af0c19df"
+    },
+    {
+      "path": "outputs/figures/experiments/measurement_noise_552_Mixed7_soc.pdf",
+      "sha256": "5aad99c71dcc552f916345b14e931bac1a0da9943af0d7857851cf21fae444e2"
+    },
+    {
+      "path": "outputs/figures/experiments/measurement_noise_552_Mixed7_soc.svg",
+      "sha256": "f754ec1f766883e7f0dccdcfc86b41316b4aa81520d4c66273ae80c097652844"
+    },
+    {
+      "path": "outputs/figures/experiments/measurement_noise_552_Mixed7_error.png",
+      "sha256": "bb05f2a338a122b0cb36ea34e0570fb845f5d418ebfa7ee18faa045458d147c3"
+    },
+    {
+      "path": "outputs/figures/experiments/measurement_noise_552_Mixed7_error.pdf",
+      "sha256": "b4a70412d09f71f428161efe486814a7fadd1e6d6c2a33221e1a6faf2dc58313"
+    },
+    {
+      "path": "outputs/figures/experiments/measurement_noise_552_Mixed7_error.svg",
+      "sha256": "157d64465f6f30dc92a02c36de6f55fd31e7a872236ae0950d440137f852676d"
+    },
+    {
+      "path": "outputs/figures/experiments/normal_552_Mixed8_soc.png",
+      "sha256": "e8eebc3446468fbe3cbb1ebf8d725fc24a9529d3b342fec8efd98bcf98c33a45"
+    },
+    {
+      "path": "outputs/figures/experiments/normal_552_Mixed8_soc.pdf",
+      "sha256": "2c7a0dc8da84aaa5337db8331c3582d6f26fb4467b28b6fe9ed78963b9dccbac"
+    },
+    {
+      "path": "outputs/figures/experiments/normal_552_Mixed8_soc.svg",
+      "sha256": "1314424923c7c05811d5956e1f1e1a8b7813289f01cab7c79c6ab3d4df28c893"
+    },
+    {
+      "path": "outputs/figures/experiments/normal_552_Mixed8_error.png",
+      "sha256": "da294dc4d53f63fa170eb17937a13629e01df7da63af0458f5e6b75ccaf566a4"
+    },
+    {
+      "path": "outputs/figures/experiments/normal_552_Mixed8_error.pdf",
+      "sha256": "8e92d74c9c878b882798801912f32088b5b0fa68734d3f9f57401022afcace23"
+    },
+    {
+      "path": "outputs/figures/experiments/normal_552_Mixed8_error.svg",
+      "sha256": "da552b1a153364956a8c7d8e3a7f9627348c43f2d9cc86480b30cb05240d0b9b"
+    },
+    {
+      "path": "outputs/figures/experiments/initial_bias_552_Mixed8_soc.png",
+      "sha256": "aacf4688f11502b848d291fde9edb288b218f718e0776fdc1a93fb56d00356a6"
+    },
+    {
+      "path": "outputs/figures/experiments/initial_bias_552_Mixed8_soc.pdf",
+      "sha256": "e39140a3841710c2a6971f0fdcf4865d7ea4bf96325fceb33ab67998b0bdfc60"
+    },
+    {
+      "path": "outputs/figures/experiments/initial_bias_552_Mixed8_soc.svg",
+      "sha256": "bb4e8c94e34adc38d97cff361502d7fdc5f3c18a08e4ead2c8b79c8c55fe60dc"
+    },
+    {
+      "path": "outputs/figures/experiments/initial_bias_552_Mixed8_error.png",
+      "sha256": "b13c0d7aca89860ee815fc398b5f3d6533a2bdd75b3387455d034b4d584e5b3d"
+    },
+    {
+      "path": "outputs/figures/experiments/initial_bias_552_Mixed8_error.pdf",
+      "sha256": "a93d2fbd0b66e8699416600060b9207644ed970fe2c75dd3576675748a085ec7"
+    },
+    {
+      "path": "outputs/figures/experiments/initial_bias_552_Mixed8_error.svg",
+      "sha256": "c6baef72175eed2838d2700d0ad91bd16d63deed189b3b734bd42337b1f43514"
+    },
+    {
+      "path": "outputs/figures/experiments/measurement_noise_552_Mixed8_soc.png",
+      "sha256": "38852ac6b6167a803eec5ed2a1f45ffb42847cf1b4f0da2e3b4a4b87b0cfd20f"
+    },
+    {
+      "path": "outputs/figures/experiments/measurement_noise_552_Mixed8_soc.pdf",
+      "sha256": "2e777d850176cd5361f2d129611c1d6541c7e894f8d023ebcb5272fa9b272bae"
+    },
+    {
+      "path": "outputs/figures/experiments/measurement_noise_552_Mixed8_soc.svg",
+      "sha256": "610758b265d66c422f7d3ee755f7bb5d1f811ab52d79c2cf898a15806f8eddcc"
+    },
+    {
+      "path": "outputs/figures/experiments/measurement_noise_552_Mixed8_error.png",
+      "sha256": "b62f6e660597e27c1a8ce59ca7ea18dca3460643eb2896dde388fd30472b3c1f"
+    },
+    {
+      "path": "outputs/figures/experiments/measurement_noise_552_Mixed8_error.pdf",
+      "sha256": "fc6f11e7b59d94e4dd1a458bfeb1886f52fb8d7a9c9a928e9ec136b9836c9888"
+    },
+    {
+      "path": "outputs/figures/experiments/measurement_noise_552_Mixed8_error.svg",
+      "sha256": "7bd816ea99e8d147d2cf5e0e0ad81b84c604379dff4d0d30225a4468fbd1436f"
+    },
+    {
+      "path": "outputs/figures/experiments/figure_notes.md",
+      "sha256": "f74f677869fe70eac526f535fb029981f9a78386b49d5d760b80fedb803d7615"
+    },
+    {
+      "path": "outputs/figures/experiments/QA.md",
+      "sha256": "1fde70d0d6d7e17c44a699e4c3e94b23e327ee3e90c3134064991e621aba107c"
+    }
+  ],
+  "visual_acceptance": "12张图目视检查；12份PDF字号及碰撞PASS；保存预测指标复算通过"
+}

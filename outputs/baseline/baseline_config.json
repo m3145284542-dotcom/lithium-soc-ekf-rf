@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "fit_files": [
+    "551_Mixed1.csv",
+    "551_Mixed2.csv",
+    "552_Mixed3.csv",
+    "552_Mixed4.csv"
+  ],
+  "fit_source": "outputs/predictions/ekf",
+  "offset_soc": 0.01591159206810845,
+  "offset_pp": 1.591159206810845,
+  "linear_coef": {
+    "intercept": 0.018962573546563073,
+    "slope_on_soc_ekf": -0.006007916042030046
+  },
+  "clip_output": [
+    0,
+    1
+  ],
+  "note": "仅用4条训练记录拟合；验证与测试只评价，不参与拟合或选择"
+}

@@ -1,0 +1,3 @@
+file,capacity_ah,integrated_ah,integration_minus_counter_ah,baseline_source_row,discharge_end_source_row,cutoff_voltage_v,role
+551_Cap_1C.csv,2.72639,2.722249965,-0.00414003499999982,1,335,2.79993,reference
+552_Cap_1C.csv,2.6928,2.688677953,-0.004122047000000073,1,331,2.79993,check_only

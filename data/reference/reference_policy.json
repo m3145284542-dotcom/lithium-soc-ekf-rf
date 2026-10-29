@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "capacity_reference_ah": 2.72639,
+  "capacity_reference_file": "551_Cap_1C.csv",
+  "capacity_rule": "预先指定551_Cap_1C完整DCH段末容量相对文件开头的净放电量；552只作核对",
+  "capacity_check_ah": 2.6928,
+  "initial_soc": 1.0,
+  "initial_soc_rule": "紧邻充电达到4.2V/50mA截止且约61分钟静置，首个动态采样按满电近似；不是独立测量真值",
+  "soc_formula": "1 - (capacity_raw_ah[0] - capacity_raw_ah[t]) / capacity_reference_ah",
+  "first_sample_offset": "将首个采样作为相对积分起点；Mixed4首计数器-0.00005Ah被扣除，约0.0018个百分点",
+  "clipping": false,
+  "forced_terminal_soc": false,
+  "model_input_columns": [
+    "voltage_v",
+    "current_a",
+    "temperature_degC"
+  ],
+  "time_columns": [
+    "time_s",
+    "dt_s",
+    "segment_id"
+  ],
+  "evaluation_only_columns": [
+    "net_discharge_ah",
+    "soc_ref",
+    "soc_ref_pct",
+    "soc_integral_check"
+  ],
+  "selection_boundary": "不使用任何动态测试SOC误差选择容量或初值；所有动态记录共用主容量"
+}

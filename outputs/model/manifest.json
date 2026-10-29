@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "stage": "3_battery_ekf",
+  "status": "canonical",
+  "created_at": "2026-10-29T00:56:17.013612+00:00",
+  "producer": "scripts/build_model.py",
+  "producer_sources": [
+    {
+      "path": "scripts/build_model.py",
+      "sha256": "16681d35e3143d8c6b9317fe0032b8d05d0be838a7476e3f85d25254d0e2af8a"
+    },
+    {
+      "path": "src/battery.py",
+      "sha256": "f80965548e36dee414bd27f1e4f0da82509c55777d2b6c8b1057b035072a7274"
+    },
+    {
+      "path": "src/ekf.py",
+      "sha256": "c208cf09aac5d787a197e6b6ca28c73037bfc7b1f3ab57592a1940a6b80490f5"
+    }
+  ],
+  "role": "第四阶段随机森林的固定电池参数、EKF配置及训练/验证预测",
+  "acceptance": "输入哈希一致；物理参数正值；至少5个有效脉冲；六条记录全采样有限值和非负方差；未使用测试集",
+  "parents": [
+    {
+      "path": "data/processed/manifest.json",
+      "sha256": "41edb46734bef2d995e867e5ee3bf009508437a9efd4d4e017fe4eced48abb7f"
+    },
+    {
+      "path": "data/reference/manifest.json",
+      "sha256": "0ce9c3e6139ce0eaff9a19bf5b9e9ce01ed2b4ff42e6b3754b56d466089454a8"
+    },
+    {
+      "path": "data/reference/reference_policy.json",
+      "sha256": "3d6c5ce36fdb124fa42621ed3501e9afa8f1fdc844b4088791e391f6f1edf2b7"
+    }
+  ],
+  "input_files": [
+    {
+      "path": "data/processed/LG_HG2_25degC/549_C20DisCh.csv",
+      "sha256": "7e9949f87aa1534ce74c9199ab1873626aac878706099d1a9ce221c9e2f73f2e"
+    },
+    {
+      "path": "data/processed/LG_HG2_25degC/549_HPPC.csv",
+      "sha256": "3b8cf3b90991930bdc129dc286da3df8e6f6794aa7e62870e9d15042b5df0206"
+    },
+    {
+      "path": "data/reference/551_Mixed1.csv",
+      "sha256": "71a07948d93ec08b91d857d18fa8272af6c715bcb58009026b3c0c945263d24b"
+    },
+    {
+      "path": "data/reference/551_Mixed2.csv",
+      "sha256": "8cb09d32f4ab9a32ab5d2eca1ba454bd403776d597bd65e7dd86c6541681d447"
+    },
+    {
+      "path": "data/reference/552_Mixed3.csv",
+      "sha256": "964b700c73336901bf6b2922749e5954a5f21228f6867d948406c49b1d466b12"
+    },
+    {
+      "path": "data/reference/552_Mixed4.csv",
+      "sha256": "05b5707bdd704fbbe9380a73722bcc1d7fdb08547fac3a072709863496727155"
+    },
+    {
+      "path": "data/reference/552_Mixed5.csv",
+      "sha256": "a25966c4e53cfeaac40be3473efed5d65bc740609edae91dc0322f09cf70b88b"
+    },
+    {
+      "path": "data/reference/552_Mixed6.csv",
+      "sha256": "09cf6e1da0c70c373ee584e1d514ab5e24cb09d999caf55d86c0d290e0e24358"
+    }
+  ],
+  "executed_splits": [
+    "train",
+    "validation"
+  ],
+  "held_out_test": [
+    "552_Mixed7.csv",
+    "552_Mixed8.csv"
+  ],
+  "files": [
+    {
+      "path": "outputs/predictions/ekf/551_Mixed1.csv",
+      "role": "ekf_prediction",
+      "sha256": "fa19a4a0aec1136c32d7351295de5be6c79fc41274801bfd2fcabfd35cc3990e"
+    },
+    {
+      "path": "outputs/predictions/ekf/551_Mixed2.csv",
+      "role": "ekf_prediction",
+      "sha256": "7c8b10c6f99d72ed0ba8ef402f69640549daf17efae9902dd075f3433178eb63"
+    },
+    {
+      "path": "outputs/predictions/ekf/552_Mixed3.csv",
+      "role": "ekf_prediction",
+      "sha256": "868338039b9844777b735f0ade4ecb0ee5add4d86ebd1dfbf75d0ba43eb43f2c"
+    },
+    {
+      "path": "outputs/predictions/ekf/552_Mixed4.csv",
+      "role": "ekf_prediction",
+      "sha256": "ad374c1b5bcde01d46ee50cc60f610ada1c027d29b9bea93ce6fd0adb5ce017f"
+    },
+    {
+      "path": "outputs/predictions/ekf/552_Mixed5.csv",
+      "role": "ekf_prediction",
+      "sha256": "14d95f62b4fbbb3caa94a5596bbbe1cfe471e50ca8176632b98215de8ef01430"
+    },
+    {
+      "path": "outputs/predictions/ekf/552_Mixed6.csv",
+      "role": "ekf_prediction",
+      "sha256": "4447539ffea911a1c697712420f984606f67db6b1cae1696158d74e173ffcfbd"
+    },
+    {
+      "path": "outputs/model/battery_parameters.json",
+      "role": "battery_parameters",
+      "sha256": "5575618b80cf944b3640efdc024c17796f3f59655883269c38be36fea55d3ed8"
+    },
+    {
+      "path": "outputs/model/ekf_config.json",
+      "role": "ekf_config",
+      "sha256": "8099464c6675ac4921084e02badff198c5231a59897b316ffbffa39cc4dd7abc"
+    },
+    {
+      "path": "outputs/model/ocv_curve.csv",
+      "role": "ocv_curve",
+      "sha256": "945a97bae61780512625b0c6492f6d1dd4ee5bf6d56de9987f21ab51e22e1609"
+    },
+    {
+      "path": "outputs/model/hppc_pulse_fits.csv",
+      "role": "rc_identification",
+      "sha256": "c76d5ed41d84b06f08708843b9cd1f9ff6f75603c7e7d90e672bf2c0e24d75e5"
+    },
+    {
+      "path": "outputs/model/ekf_metrics.csv",
+      "role": "metrics",
+      "sha256": "94ad850744c1748c4cd8d8c49858bfca4fef3654a1aa12a8fe4951b9f185d96a"
+    },
+    {
+      "path": "outputs/model/建模报告.md",
+      "role": "stage_report",
+      "sha256": "ee73d68c75414a49406677e4a29f12dafc47a3a0f6077ca0cf8b115adcab49fa"
+    }
+  ]
+}

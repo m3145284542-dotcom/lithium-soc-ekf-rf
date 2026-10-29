@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "test_files": [
+    "552_Mixed7.csv",
+    "552_Mixed8.csv"
+  ],
+  "scenarios": {
+    "normal": {
+      "label": "正常工况",
+      "initial_soc": 1.0,
+      "seed": null
+    },
+    "initial_bias": {
+      "label": "初始SOC低估10个百分点",
+      "initial_soc": 0.9,
+      "seed": null
+    },
+    "measurement_noise": {
+      "label": "测量噪声",
+      "initial_soc": 1.0,
+      "seed": 20261029
+    }
+  },
+  "noise": {
+    "distribution": "independent zero-mean Gaussian",
+    "voltage_std_v": 0.01,
+    "current_std_a": 0.05,
+    "record_seed_rule": "base seed + test file index",
+    "generator": "numpy.random.default_rng; voltage draws then current draws"
+  },
+  "scoring": "all samples including first voltage update; equal record mean MAE/RMSE",
+  "reference": "unchanged original computed SOC; never regenerated from noisy inputs",
+  "model_refit": false,
+  "parameters_changed_after_test": false,
+  "perturbations_combined": false,
+  "ekf_settings": {
+    "initial_soc": 1.0,
+    "initial_polarization_v": 0.0,
+    "initial_std": [
+      0.05,
+      0.02
+    ],
+    "process_variance_per_s": [
+      1e-08,
+      1e-05
+    ],
+    "voltage_std_v": 0.03,
+    "selection": "首版工程预设；未利用动态SOC误差搜索超参数",
+    "integration": "相邻电流均值与真实dt；极化状态采用区间常值输入解析递推"
+  },
+  "parents": [
+    {
+      "path": "outputs/model/manifest.json",
+      "sha256": "657c76b7c249caa9d2ab1170cf8407b5b0cc1ec08cf3ec0f77b708ba8291ec52"
+    },
+    {
+      "path": "outputs/correction/manifest.json",
+      "sha256": "53c32cb7f5cc2bc767ec8618a31269e25adc7db1ee079d161ced1343a50b624c"
+    },
+    {
+      "path": "data/reference/manifest.json",
+      "sha256": "0ce9c3e6139ce0eaff9a19bf5b9e9ce01ed2b4ff42e6b3754b56d466089454a8"
+    }
+  ],
+  "numpy_version": "2.3.5",
+  "prediction_schema": "SOC ratios 0..1; signed errors in percentage points; time in seconds"
+}

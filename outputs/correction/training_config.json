@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "selected_candidate": "depth12_leaf50",
+  "parameters": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "criterion": "squared_error",
+    "max_depth": 12,
+    "max_features": 1.0,
+    "max_leaf_nodes": null,
+    "max_samples": 0.7,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 50,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 120,
+    "n_jobs": 4,
+    "oob_score": false,
+    "random_state": 20261029,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "features": [
+    "soc_ekf",
+    "voltage_v",
+    "current_a",
+    "temperature_degC",
+    "voltage_residual_v",
+    "current_mean_5s_a",
+    "voltage_change_5s_v"
+  ],
+  "target": "soc_ref - soc_ekf，SOC比例单位",
+  "window_seconds": 5,
+  "current_mean": "精确[t-5,t]内样本电流算术均值，非时间加权均值",
+  "voltage_change": "当前电压减窗口内首个采样电压，开头使用已有历史",
+  "selection_rule": "两个验证记录各自RMSE的等权平均；相同值保留较浅方案",
+  "candidate_objectives_rmse_pp": {
+    "depth12_leaf50": 0.9786483717759606,
+    "depth18_leaf20": 0.9897589093128074
+  },
+  "training_files": [
+    "551_Mixed1.csv",
+    "551_Mixed2.csv",
+    "552_Mixed3.csv",
+    "552_Mixed4.csv"
+  ],
+  "selection_files": [
+    "552_Mixed5.csv",
+    "552_Mixed6.csv"
+  ],
+  "held_out_test": [
+    "552_Mixed7.csv",
+    "552_Mixed8.csv"
+  ],
+  "training_rows": 311073,
+  "refit_on_validation": false,
+  "clip_output": [
+    0,
+    1
+  ],
+  "feedback_to_ekf": false,
+  "library_versions": {
+    "sklearn": "1.8.0",
+    "joblib": "1.5.3"
+  }
+}

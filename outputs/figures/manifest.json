@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "canonical",
+  "producer": "scripts/plot_inputs.py",
+  "created_at": "2026-10-29T00:46:17.317369+00:00",
+  "producer_sha256": "9bc7677570b0b65d5e731ee7098a600665e85b94ed96824843870ff102399f4d",
+  "acceptance": "全部来源采样绘制，输入哈希匹配，已导出PNG/PDF/SVG；本次布局和PDF检查见QA.md",
+  "source_path": "data/reference/551_Mixed1.csv",
+  "source_sha256": "71a07948d93ec08b91d857d18fa8272af6c715bcb58009026b3c0c945263d24b",
+  "source_rows": 77226,
+  "plotted_rows": 77226,
+  "description": "完整训练记录输入和计算参考SOC，不是算法预测结果",
+  "alignment_qa": "passed",
+  "files": [
+    {
+      "path": "outputs/figures/Mixed1_inputs_reference.png",
+      "sha256": "887ec10e962acf9b7ec7fe8958a30a5fc63e8c6c7d1404c1f21f2f02fa025ddf"
+    },
+    {
+      "path": "outputs/figures/Mixed1_inputs_reference.pdf",
+      "sha256": "dd7a50c88e5501b091f09e8f94f0104860e1cc0cec4fb6b1717a5dbc80a0f5d7"
+    },
+    {
+      "path": "outputs/figures/Mixed1_inputs_reference.svg",
+      "sha256": "559f0e494b8296f84a1b2bb89e1490ffede501e29d64ee7c9614cef7f5b8b5b4"
+    }
+  ]
+}

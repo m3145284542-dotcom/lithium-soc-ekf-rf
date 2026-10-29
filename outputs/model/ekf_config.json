@@ -1,0 +1,15 @@
+{
+  "initial_soc": 1.0,
+  "initial_polarization_v": 0.0,
+  "initial_std": [
+    0.05,
+    0.02
+  ],
+  "process_variance_per_s": [
+    1e-08,
+    1e-05
+  ],
+  "voltage_std_v": 0.03,
+  "selection": "首版工程预设；未利用动态SOC误差搜索超参数",
+  "integration": "相邻电流均值与真实dt；极化状态采用区间常值输入解析递推"
+}

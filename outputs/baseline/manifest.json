@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "status": "supplementary",
+  "producer": "scripts/baseline_offset.py",
+  "created_at": "2026-10-29T11:14:58.914386+00:00",
+  "input_files": [
+    {
+      "path": "outputs/predictions/ekf/551_Mixed1.csv",
+      "sha256": "fa19a4a0aec1136c32d7351295de5be6c79fc41274801bfd2fcabfd35cc3990e"
+    },
+    {
+      "path": "outputs/predictions/ekf/551_Mixed2.csv",
+      "sha256": "7c8b10c6f99d72ed0ba8ef402f69640549daf17efae9902dd075f3433178eb63"
+    },
+    {
+      "path": "outputs/predictions/ekf/552_Mixed3.csv",
+      "sha256": "868338039b9844777b735f0ade4ecb0ee5add4d86ebd1dfbf75d0ba43eb43f2c"
+    },
+    {
+      "path": "outputs/predictions/ekf/552_Mixed4.csv",
+      "sha256": "ad374c1b5bcde01d46ee50cc60f610ada1c027d29b9bea93ce6fd0adb5ce017f"
+    },
+    {
+      "path": "outputs/predictions/ekf/552_Mixed5.csv",
+      "sha256": "14d95f62b4fbbb3caa94a5596bbbe1cfe471e50ca8176632b98215de8ef01430"
+    },
+    {
+      "path": "outputs/predictions/ekf/552_Mixed6.csv",
+      "sha256": "4447539ffea911a1c697712420f984606f67db6b1cae1696158d74e173ffcfbd"
+    },
+    {
+      "path": "outputs/predictions/fusion/552_Mixed5.csv",
+      "sha256": "b4427d2bd5c6c4ed6486a64387d26e50595a3d133c297e71bde7bda8e5de03e2"
+    },
+    {
+      "path": "outputs/predictions/fusion/552_Mixed6.csv",
+      "sha256": "a3f77b1c69a75aec235814babbe91d7c29c926033de60beecbf50e2d01085af2"
+    },
+    {
+      "path": "outputs/experiments/predictions/normal/552_Mixed7.csv",
+      "sha256": "da146853e9bae8dcba11cc3d39ec7d1b947f81b9296e6798dcad4ea2e3ecf97c"
+    },
+    {
+      "path": "outputs/experiments/predictions/normal/552_Mixed8.csv",
+      "sha256": "691d40196ceefad3aab04cfa4291395896c7317f3f7eda2af7da0fcf5d0b60f3"
+    },
+    {
+      "path": "outputs/experiments/predictions/initial_bias/552_Mixed7.csv",
+      "sha256": "1620380114cce646192a1d42a5483c3807598bbada3c092ef55961476ce68407"
+    },
+    {
+      "path": "outputs/experiments/predictions/initial_bias/552_Mixed8.csv",
+      "sha256": "835630e356b05dc35cac070030ae50caffba55d4aca44100258e58278ea99e35"
+    },
+    {
+      "path": "outputs/experiments/predictions/measurement_noise/552_Mixed7.csv",
+      "sha256": "cacf6f6a3db1988cf83e73153aac8adb1d447ff47914df3c550ed2c1be72fe19"
+    },
+    {
+      "path": "outputs/experiments/predictions/measurement_noise/552_Mixed8.csv",
+      "sha256": "80c54dcc9ee28e4c6e9f7d0fb513064ca9e494614c90b0551fe7adcac912268d"
+    }
+  ],
+  "files": [
+    {
+      "path": "outputs/baseline/metrics.csv",
+      "sha256": "0ae8e99161db6ffbdc048c1d804292757d76537fb832e02a6ce93ef087bd9f41"
+    },
+    {
+      "path": "outputs/baseline/summary.csv",
+      "sha256": "f55ef12780b2b45254805f3e02c5a5c67b47388446c4f9319d8718ef1f622b01"
+    },
+    {
+      "path": "outputs/baseline/baseline_config.json",
+      "sha256": "291e3734c3aa629621acb35370e4b437908d2b08782103fc7364c5bf1bd615f2"
+    }
+  ]
+}
