@@ -14,12 +14,12 @@
 
 为控制体积，仓库不包含原始与清洗后的数据、8条动态工况的逐采样CSV、逐采样预测结果和交付ZIP（见 `.gitignore`）。各清单中的哈希仍指向这些文件。需要复现时，先运行 `python scripts/prepare_data.py` 下载原始数据，再按下文顺序重建；或运行 `python main.py --stage all`。指标表、报告、图表、训练好的随机森林模型和汇报材料都已包含在仓库中。
 
-课堂展示推荐使用 [SOC融合估计_课堂展示_可编辑版.pptx](presentation/SOC融合估计_课堂展示_可编辑版.pptx)（9页），讲稿见 [6分钟讲稿与答辩](presentation/6分钟讲稿与答辩.md)。
+课堂展示最终版为 [SOC融合估计_课堂展示_最终版.pptx](presentation/SOC融合估计_课堂展示_最终版.pptx)（16页，含目录和5张章节页），讲稿见 [6分钟讲稿与答辩](presentation/6分钟讲稿与答辩.md)。
 
 ## 交付入口
 
 - [交付说明](交付说明.md)：文件导航、运行方式与提交前待办。
-- [7页汇报PPT](presentation/SOC融合估计_6分钟汇报.pptx)、[6分钟讲稿与答辩](presentation/6分钟讲稿与答辩.md)。
+- [课堂展示最终版PPT](presentation/SOC融合估计_课堂展示_最终版.pptx)、[6分钟讲稿与答辩](presentation/6分钟讲稿与答辩.md)。
 - [贡献记录与个人反思模板](presentation/贡献记录与个人反思.md)：按实际工作填写，未虚构成员经历。
 - 完整复现包：`delivery/SOC融合估计_完整交付.zip`，附`delivery/交付包校验.json`。
 - 展示材料正式入口：`presentation/manifest.json`，绑定上游正式实验与材料哈希。
